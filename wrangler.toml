@@ -1,8 +1,12 @@
-name = "my-worker"
+name = "my-app"
 type = "javascript"
-
-account_id = ""
-workers_dev = true
-route = ""
 zone_id = ""
+account_id = ""
+route = ""
+workers_dev = true
 compatibility_date = "2022-04-03"
+
+[build]
+command = "npm install && npm run build"
+[build.upload]
+format = "service-worker"
