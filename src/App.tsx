@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  useEffect(()=>{
+    const init = async () => {
+      const res = await fetch('https://my-worker.wp-worker.workers.dev')
+      console.log(res)
+    }
+    init()
+  },[])
   return (
     <div className="App">
       <header className="App-header">
